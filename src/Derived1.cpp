@@ -4,8 +4,8 @@
 
 #include "Derived1.h"
 //Constructors
-
-
+Derived1::Derived1() {}
+Derived1::Derived1(int num) : num(num) {}
 
 //Destructor
 Derived1::~Derived1() {
@@ -20,13 +20,14 @@ void Derived1::do_something(){
     cout << "Derived1!!!" << endl;
 }
 
-string Derived1::toString() {
-    stringstream s;
-    s<<"---INFORMACION CLASS DERIVED 1---"<<endl;
 
-    return s.str();
+ostream &operator<<(ostream &os, const Derived1 &derived1) {
+    os << static_cast<const Base &>(derived1) << " num: " << derived1.num;
+    return os;
 }
 
-Derived1::Derived1() {}
+
+
+
 
 

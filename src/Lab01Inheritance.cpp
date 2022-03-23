@@ -11,10 +11,12 @@ int main() {
     Derived1 derived1;
     derived1.do_something();
 
-
+    cout << derived1 << endl;
 
    Derived2 derived2;
-    derived2.do_something();
+   derived2.do_something();
+
+
 
 
 
