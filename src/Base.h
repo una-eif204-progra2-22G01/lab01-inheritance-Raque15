@@ -20,7 +20,7 @@ public:
 
     virtual void do_something();
 
-    virtual string toString();
+    friend ostream &operator<<(ostream &os, const Base &base);
 
 };
 
